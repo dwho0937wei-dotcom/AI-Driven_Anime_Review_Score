@@ -54,17 +54,28 @@ All three have been GridSearched in an attempt to get higher accuracy.
 #### Results
 Unfortunately, despite using GridSearch, all three methodologies have very low score. The 1st one having the highest score but only slightly higher than a quarter. The 2nd one's score is significantly lower, and the 3rd one is the lowest in which I was surprised on how extremely low it is.
 This is the barplot that visualizes it all:
+![image](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/assets/63332279/baa6c8d7-1135-4a23-8d79-c548fe6e74ff)
 
+#### Conclusion & Next Steps
+Thinking about it rationally, it would make sense on why the accuracies are so low.
+After all, the anime's synopsis and assigned genres shouldn't matter on its quality.
+I was rather surprised that the anime's number of episodes, ranking, and score are even more useless on predicting the number of members it would gain.
+In the end, what matters significantly more is how it's written, played, and expressed towards the audiences as well as what impact it can leave to the audiences. Visual quality may also matter.
+Unfortunately, the initial DataFrame I've used doesn't have such information.
 
-#### Next steps
-What suggestions do you have for next steps?
+Hence, I am left with two options:
+
+1. Continue researching on the same research question using different models, fine-tune more parameters, and/or implement other unused CSVs that I also have.
+2. Change my research question into something more feasible to answer/predict with the current data I possess like instead of predicting the anime's popularity, perhaps I should predict its score as the score is also worth noting on the anime's quality.
+
+For now, I am leaning a little towards the 2nd option.
+
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [Anime_JupyterNotebook](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/blob/main/Anime_JupyterNotebook.ipynb)
 
 
-##### Contact and Further Information
+
+##### Further Information
 Note that the .gitattribute in the repo is for committing the three large CSVs into this repo since some CSVs' size exceeds the size limit that this repo can commit the CSVs into.
