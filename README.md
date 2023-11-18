@@ -23,7 +23,7 @@ then why not create more seasons based on them so that people can enjoy watching
 these anime?
 
 #### Data Sources
-For now, I only used [animes.csv](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/blob/main/animes.csv) as data for predicting some anime's popularity, but I may use the other two CSVs in this repo later on as I continue this project. The three CSVs came from the [Anime Dataset with Reviews](https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews) Kaggle website.
+For now, I only used [animes.csv](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/blob/main/animes.csv) as data for predicting some anime's popularity, but I may use the other two CSVs in this repo later on as I continue this project. The three CSVs came from the [Anime Dataset with Reviews](https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews) Kaggle website.                                    
 The animes.csv contains the following features:
 1. uid - The ID of the anime/manga
 2. title - The title of the anime/manga
