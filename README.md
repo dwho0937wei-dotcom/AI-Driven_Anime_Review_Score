@@ -45,7 +45,7 @@ The feature popularity will also be left out because if we need to assume that w
 
 #### Methodology
 There are three distinct methodologies done for different features in an attempt to predict the anime's member size.
-1. Column **synopsis** was first cleaned of any potential null values and then stemmed. The Bag-of-Words (BoW) with Random Forest Regression was then done for predicting the number of members. Other slightly different methodologies was also done but this methodology in particular gave the highest accuracy.
+1. Column **synopsis** was first cleaned of any potential null values and then lemmatized. Due to the very long run time it would take to train and test all 15,583 synopses, I only randomly chose 1,500 of them. The Bag-of-Words (BoW) with Random Forest Regression was then done for predicting the number of members. Other slightly different methodologies was also done but this methodology in particular gave the highest accuracy.
 2. Column **genre** consists of tuples of genres which were then transformed into a string of genres, each genre separated by an empty space. BoW was then used to get binary columns of distinct genres, i.e. they represent if their corresponding genre is assigned or not in the anime. Random Forest Regression was used again for predicting the number of members.
 3. Other numeric features **episodes, ranked, and score** were used for training the Decision Tree model for it to predict the number of members.
 
