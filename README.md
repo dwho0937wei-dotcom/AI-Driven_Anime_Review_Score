@@ -54,7 +54,7 @@ All three have been GridSearched in an attempt to get higher accuracy.
 #### Results
 Unfortunately, despite using GridSearch, all three methodologies have very low score. The 1st one having the highest score but only slightly higher than a quarter. The 2nd one's score is significantly lower, and the 3rd one is the lowest in which I was surprised on how extremely low it is.
 This is the barplot that visualizes it all:
-![image](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/assets/63332279/baa6c8d7-1135-4a23-8d79-c548fe6e74ff)
+![alt-text](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/blob/main/images/1st_Capstone_Barplot.PNG)
 
 #### Conclusion & Next Steps
 Thinking about it rationally, it would make sense on why the accuracies are so low.
@@ -78,4 +78,4 @@ For now, I am leaning a little towards the 2nd option.
 
 
 ##### Further Information
-Note that the .gitattribute in the repo is for committing the three large CSVs into this repo since some CSVs' size exceeds the size limit that this repo can commit the CSVs into.
+Note that the [.gitattribute](https://github.com/dwho0937wei-dotcom/My_Anime_Capstone/blob/main/.gitattributes) in the repo is for committing the three large CSVs into this repo since some CSVs' size exceeds the size limit that this repo can commit the CSVs into.
