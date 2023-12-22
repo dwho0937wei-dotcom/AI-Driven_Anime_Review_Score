@@ -71,9 +71,12 @@ Hence, I am left with two options:
 For now, I am leaning a little towards the 2nd option.
 
 ### Part 2
-
+Based on the first **Conclusion**, I've decided to follow through the second option, i.e. switch from popularity to scores.
 For Part 2, **Research Question** remain pretty much the same except that popularity is replaced with score this time which can determine the anime's quality. I believe predicting the score is beneficial for the same **Rationale** as in popularity. **Data Sources** remain the same. The **Methadology**, **Results**, and **Conclusion & Next Steps** will definitely differ and hence, I will post them further down.
 
+**Methdology 2**
+
+**Results 2**
 
 #### Outline of project
 
