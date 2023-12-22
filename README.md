@@ -72,11 +72,34 @@ For now, I am leaning a little towards the 2nd option.
 
 ### Part 2
 Based on the first **Conclusion**, I've decided to follow through the second option, i.e. switch from popularity to scores.
+
 For Part 2, **Research Question** remain pretty much the same except that popularity is replaced with score this time which can determine the anime's quality. I believe predicting the score is beneficial for the same **Rationale** as in popularity. **Data Sources** remain the same. The **Methadology**, **Results**, and **Conclusion & Next Steps** will definitely differ and hence, I will post them further down.
 
-**Methdology 2**
+#### Methdology 2
+I came up with three different methodologies for predicting the new targeted feature "score", each focused on either Synopsis, Genre, or the other Numeric Features.
+1. Like in **Part 1**, column **synopsis** is cleaned of any null values and then lemmatized. However, instead of using the Natural Language Processing (NLP), I'll be using the following Keras Sequential Model I've created using the Embedding, GRU, and Dense layers compiled with Adam algorithm and measured with mean squared and mean absolute errors. This led the synopses to be further processed with keras.preprocessing.text.Tokenizer and keras.preprocessing.sequence.pad_sequences in order fit into the model.
+2. Like in **Part 1**, column **genre** transformed from a tuple to a string of genres and then separated by empty spaces. Because I'll be using Keras Sequential Model with GRU, and two Dense layers, I'll need to further process the **genre** into numpy arrays for binarily fitting it into the model. The model is compiled with Adam algorithm and measured with 'binary_crossentropy' and with mean squared error.
+3. Because of the results from the previous 2 methodologies that I'll later disclose, I've decided that instead of using the Keras Sequential Model, I'll simply use the XGBoostRegressor for predicting the score using the numeric columns episodes, members, and ranked. 
 
-**Results 2**
+#### Results 2
+I believe the first two methodologies are worse than the ones in **Part 1**. The first one focusing on the synopsis didn't work at all with Invalid Argument Error that I'm uncertain how to fix. The second one focusing on the genre has a high mean squared error of 13.6070 considering that the score only ranges from 0 to 10.
+
+On the other hand, the third one is way better than the one in **Part 1** because I correctly used a regression model XGBoostRegressor to predict the continuous score compared to when I used a classifier model DecisionTreeClassifier to predict the number of members rather than the regression model DecisionTreeRegressor. The XGBoostRegressor received an accuracy score of approximately 81% with its test mean squared error approximately 0.192 for predicting the anime's score.
+
+#### Conclusion & Next Steps 2
+The Keras Sequential Model is currently not suitable for Synopsis nor Genre on my part. This may further acknowledge that synopsis and assigned genres are not strongly related, if related at all, to the anime's quality. Or, this is most likely because I am still inexperience and unfamiliar with efficiently utilizing this model for texts compared to Natural Processing Language (NLP).
+
+Thus, my probable next step for Synopsis and Genre is either:
+1. continue researching on the Keras Sequential Model on Synopsis & Genre,
+2. or revert back to models in **Part 1** to use for predicting the scores.
+
+As for the numeric columns (episodes, ranked, and score) back in **Part 1**, I've noticed or been reminded that I mistakenly use the DecisionTreeClassifier in **Part 1** for predicting number of members when it should have been DecisionTreeRegressor instead.
+
+I've already moved on to scores as the target feature, and using the XGBoostRegressor with the three other numeric columns (episodes, members, ranked) is pretty effective on predicting the score. It has a high accuracy of 81% and thus, shows that the anime's number of episodes and members, and its ranking may strongly correlate with its score. 
+
+For my next step, I may either:
+1. fine-tune XGBoostRegressor,
+2. or try other regression models with their default parameters to see if they can more accurately predict the score based on the given numeric features.
 
 #### Outline of project
 
